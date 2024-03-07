@@ -1,0 +1,572 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(0, 8, 29);
+  font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  color: #fff;
+}
+
+.image-overlay {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 8, 29, 0.7),
+      rgb(0, 8, 29, 0.7)
+    ),
+    url(images/bg\ netflix.jpg);
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 100rem;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+.logo-container {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.netflix-logo {
+  width: 89px;
+  height: 50px;
+}
+
+button {
+  border-radius: 4px;
+  padding: 8px 15px;
+  border: none;
+  background-color: rgb(229, 9, 20);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+button:hover {
+  background-color: rgba(229, 9, 20, 0.799);
+  cursor: pointer;
+  transition: 0.8s ease;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.hero-section {
+  padding: 3.2rem 12px 0;
+}
+
+.paragraph {
+  font-size: 19px;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+.mail-box {
+  background-image: linear-gradient(to right, #e50914, #233371);
+  border-radius: 8px;
+  padding: 4px;
+  margin: 20px auto;
+}
+
+.mail-box > div {
+  background-color: rgb(0, 8, 29);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin-top: 10px;
+}
+
+#email {
+  width: 100%;
+  background-color: rgb(14 14 14);
+  padding: 14px;
+  border: 1px #939393 solid;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.get-started {
+  display: flex;
+  margin-top: 15px;
+  border-radius: 4px;
+  padding: 12px 13px;
+  border: none;
+  background-color: #e50914;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  width: 153px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-chevron-right {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+}
+
+.watch-container {
+  width: 100%;
+  background-color: rgb(7 8 36);
+  border-radius: 7px;
+  padding: 1.5rem 1rem 10px;
+}
+
+.watch-container h2 {
+  font-size: 2rem;
+}
+.watch-container p {
+  font-size: 17px;
+  padding: 12px 0;
+  line-height: 1.3rem;
+}
+.desktop {
+  width: -webkit-fill-available;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 0.5px ridge rgb(72 72 72 / 64%);
+}
+
+.FAQ-container {
+  margin-top: 3.6rem;
+}
+
+.FAQ-container:first-child,
+footer {
+  padding: 5rem 1rem;
+}
+
+.FAQ-container h2 {
+  font-size: 2rem;
+}
+
+/* accordion style */
+
+.section-for-accordion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#accordion-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+}
+
+#accordion-container li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+
+.fa-plus {
+  font-size: 20px;
+}
+
+.fa-xmark {
+  display: none;
+}
+
+#accordion-container label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgba(19, 33, 68, 1);
+  color: rgb(255, 255, 255);
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+
+#accordion-container label:hover {
+  background-color: rgb(78 103 160 / 54%);
+  transition: 0.5s ease;
+}
+
+#accordion-container input[type="radio"] {
+  display: none;
+}
+
+#accordion-container .content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(19, 33, 68, 1);
+  color: #fff;
+  font-size: 18px;
+  border-top: 2px solid rgb(0, 8, 29);
+  transition: max-height 0.8s ease;
+}
+
+#accordion-container .content p {
+  padding: 24px;
+}
+
+#accordion-container input[type="radio"]:checked ~ .content {
+  max-height: 655px;
+  transition: max-height 2s ease;
+}
+
+#accordion-container input[type="radio"]:checked + label .fa-plus {
+  display: none;
+}
+
+#accordion-container input[type="radio"]:checked + label .fa-xmark {
+  display: block;
+}
+
+footer {
+  display: flex;
+  flex-flow: column;
+  padding: 5rem 1rem 3rem;
+}
+
+.footer-links {
+  margin-top: 3rem;
+}
+
+.info {
+  margin-top: 12px;
+}
+
+footer a,
+footer p,
+.footer-globe {
+  display: flex;
+}
+
+footer a {
+  color: #bbb9b9;
+  font-size: 15px;
+  font-weight: 500;
+}
+footer a:active {
+  color: #e50914;
+}
+
+select {
+  background-color: rgb(14 14 14);
+  padding: 7px 30px;
+  border: 1px #939393 solid;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.footer-globe {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2px;
+}
+
+.fa-globe {
+  display: none;
+}
+
+footer p {
+  font-size: 14px;
+  color: #bbb9b9;
+}
+
+/* tablet view */
+@media (min-width: 767px) {
+  .wrapper {
+    padding: 0px 29px;
+  }
+
+  .logo-container {
+    padding: 0 2.2rem;
+  }
+
+  .hero-section {
+    padding: 4rem 4.5rem 0;
+  }
+
+  h1 {
+    width: 80%;
+  }
+
+  .mail-box {
+    margin: 20px 0 35px;
+  }
+
+  .mail-box > div {
+    padding: 18px;
+  }
+
+  .text {
+    padding-top: 0;
+  }
+
+  .form-box {
+    flex-direction: row;
+    margin-top: 12px;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  #email {
+    width: 320px;
+    padding: 1.1rem;
+  }
+
+  .get-started {
+    margin: 0 0 0 9px;
+    font-size: 22px;
+    width: 210px;
+  }
+  .watch-container {
+    padding: 0 1rem;
+  }
+
+  .screen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 3.5rem;
+  }
+
+  .desktop {
+    width: 281px;
+  }
+
+  .box1 {
+    flex-flow: row-reverse;
+    width: 99%;
+  }
+
+  hr {
+    margin: 1.5rem 3rem;
+  }
+
+  .FAQ-container:first-child,
+  footer {
+    padding: 5rem 4.6rem;
+  }
+
+  .FAQ-container h2 {
+    font-size: 2.6rem;
+  }
+
+  .accordion {
+    margin: 0.5rem 0 0;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fa-globe {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 12px;
+    transform: translateX(10px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .netflix-logo {
+    width: 145px;
+    height: 83px;
+  }
+
+  .hero-section {
+    padding: 4rem 6.2rem 0;
+  }
+
+  h1 {
+    width: 70%;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .paragraph {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .mail-box {
+    margin: 35px 0;
+  }
+
+  .mail-box > div {
+    padding: 23px 46px;
+  }
+
+  #email {
+    width: 370px;
+    padding: 1.1rem;
+  }
+
+  .screen-container {
+    padding: 16px 5.2rem;
+  }
+
+  .desktop {
+    width: 385px;
+  }
+
+  hr {
+    margin: 1.5rem 5.2rem;
+  }
+
+  #accordion-container label,
+  .content p {
+    font-size: 1.5rem;
+  }
+
+  .fa-plus {
+    font-size: 3.5rem;
+  }
+
+  .fa-xmark {
+    font-size: 2.5rem;
+  }
+  .FAQ-container:first-child,
+  footer {
+    padding: 7rem 6rem;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1439px) {
+  .wrapper {
+    padding: 0px 60px;
+  }
+
+  .hero-section {
+    padding: 5rem 6.2rem 0;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .paragraph {
+    font-size: 26px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .watch-container h2 {
+    font-size: 2rem;
+  }
+
+  .watch-container p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .desktop {
+    width: 570px;
+  }
+
+  #accordion-container {
+    padding: 0.5rem 0 0;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1997px) {
+  .image-overlay {
+    background-size: contain;
+  }
+}
+
+@media (min-width: 2559px) {
+  .image-overlay {
+    background-size: contain;
+  }
+
+  .hero-section {
+    padding: 6rem 9rem 0;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .paragraph {
+    font-size: 33px;
+  }
+
+  .mail-box {
+    margin: 45px 0;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .screen-container {
+    padding: 16px 11.2rem;
+  }
+
+  .watch-container h2 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .watch-container p {
+    line-height: 27px;
+  }
+
+  .desktop {
+    width: 605px;
+  }
+
+  hr {
+    margin: 1.5rem 11.2rem;
+  }
+
+  .FAQ-container:first-child,
+  footer {
+    padding: 7rem 11.2rem;
+  }
+  footer {
+    margin-top: 2rem;
+  }
+}

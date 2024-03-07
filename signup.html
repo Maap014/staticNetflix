@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup.css" />
+    <title>Netflix</title>
+  </head>
+  <body>
+
+    <header class="logo-container">
+      <a href="index.html">
+        <img
+          src="images/Netflix-Logo-768x432.png"
+          alt="Netflix-logo"
+          class="netflix-logo"
+        />
+      </a>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <section class="sign-in-container">
+                <header>
+                    <h1>Sign In</h1> 
+                </header>
+                <div>
+                    <form>
+                      <label for="email">
+                        <input
+                          type="text"
+                          name="text"
+                          id="text"
+                          placeholder="Email or phone number"
+                          required
+                        />
+                      </label>
+                      <label for="password">
+                        <input 
+                          type="password"
+                          name="password"
+                          id="password"
+                          placeholder="Password"
+                          minlength="5" maxlength="10"
+                          pattern="{a-zA-Z0-9}"
+                          required
+                        />
+                      </label>
+                      <button>Sign in</button>
+                      <div class="remember-me-check-box">
+                        <div><input type="checkbox" name="checkbox" id="checkbox">
+                            <label for="checkbox"> Remember me</label></div>
+                        <a href="https://www.netflix.com/ng/LoginHelp" class="need-help">Need help?</a>
+                      </div>
+                    </form>
+            </section>
+            <section class="sign-up-section">
+                <p>New to Netflix? 
+                    <a class="sign-up-link" href="index.html">Sign up now</a>
+                </p>
+                <div class="recaptcha">This page is protected by Google reCAPTCHA to ensure you're not a bot.
+                    <input type="radio" name="checkbox" id="radio">
+                    <label for="radio" class="learn-more">Learn more
+                    </label>
+                    <label for="radio" class="terms-of-service">
+                        The information collected by Google reCAPTCHA is subject to the Google <a href="https://policies.google.com/privacy" target="_blank" class="privacy-policy">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" class="privacy-policy"> Terms of Service</a>, and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalized advertising by Google).
+                    </label>
+                  </div>   
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href="#" class="contact-us">Questions? Contact us.</a>
+          </div>
+          <div class="footer-links">
+            <a href="#" class="info">FAQ</a>
+            <a href="#" class="info">Help Center</a>
+            <a href="#" class="info">Terms of Use</a>
+            <a href="#" class="info">Privacy</a>
+            <a href="#" class="info">Cookie Preferences</a>
+            <a href="#" class="info">Corporate Information</a>
+          </div>
+          <p class="maap"> By Maap</p>
+    </footer>
+  </body>
+</html>
+
+
